@@ -1,0 +1,189 @@
+.image_editor {
+  width: 100vw;
+  height: 100vh;
+  background-color: #e1e6ef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .card {
+    padding: 1.75rem;
+    width: 43.75rem;
+    height: 60%;
+    background-color: #fff;
+    box-shadow: 0 0.5rem 1rem 0rem rgb(201, 201, 201);
+    .card_header {
+      text-align: center;
+      padding-bottom: 0.9375rem;
+    }
+    .card_body {
+      display: flex;
+      justify-content: center;
+      .sidebar {
+        .reset {
+          margin-top: 1.25rem;
+          .save {
+            background-color: #404040 !important;
+            margin-left: 0.3125rem;
+          }
+          button {
+            background-color: rgb(243, 42, 85);
+            padding: 0.5rem;
+            border-radius: 0.1875rem;
+            outline: none;
+            border: 1px solid #dad7d7;
+            cursor: pointer;
+            color: #fff;
+            font-weight: 600;
+            text-transform: capitalize;
+            font-size: 0.9375rem;
+          }
+        }
+        span {
+          font-size: 0.9375rem;
+          color: #404040;
+          margin-bottom: 0.25rem;
+          display: block;
+        }
+        .side_body {
+          width: 15.625rem;
+          border: 0.0625rem solid #c3c5c4;
+          margin-left: 0.5rem;
+          height: 18.75rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          .filter_key {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 0.5rem;
+            button.active {
+              background-color: rgb(84, 93, 216);
+              color: #fff;
+            }
+            button {
+              padding: 0.5rem;
+              background-repeat: 0.1875rem;
+              border: 0.0625rem solid #dad7d7;
+              cursor: pointer;
+              color: #404040;
+              text-transform: capitalize;
+            }
+          }
+          .filter_sidebar {
+            margin: 0.9375rem 0;
+            .label_bar {
+              margin-bottom: 0.25rem;
+              display: flex;
+              justify-content: space-between;
+              label,
+              span {
+                color: #404040;
+                font-size: 0.9375rem;
+                text-transform: capitalize;
+              }
+            }
+            input {
+              width: 100%;
+            }
+          }
+          .rotate {
+            label {
+              margin-bottom: 0.5rem;
+              display: block;
+              font-size: 0.9375rem;
+              color: #404040;
+            }
+            .icon {
+              display: grid;
+              grid-template-columns: repeat(4, 1fr);
+              grid-gap: 0.3125rem;
+              div {
+                border: 1px solid rgb(179, 194, 194);
+                padding: 0.5rem 0.3125rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+      .image_section {
+        margin-left: 0.5rem;
+        width: 350px;
+        background-color: #f0f0f0;
+        height: 18.75rem;
+        .image {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+          img {
+            object-fit: scale-down;
+            transition: all 0.5s;
+            width: 100%;
+            height: 100%;
+          }
+          label {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            border: dotted;
+            border-color: #c5c9c5;
+            cursor: pointer;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+            svg {
+              font-size: 2.5rem;
+              color: #b4acac;
+            }
+            span {
+              color: #404040;
+            }
+          }
+        }
+        .image_select {
+          margin: 1.25rem 0;
+          display: flex;
+          justify-content: flex-end;
+          input {
+            display: none;
+          }
+          label,
+          button {
+            padding: 0.5rem;
+            border-radius: 0.1875rem;
+            outline: none;
+            border: 1px solid #dad7d7;
+            cursor: pointer;
+            color: #fff;
+            font-weight: 600;
+            text-transform: capitalize;
+            font-size: 0.9375rem;
+          }
+          .redo,
+          .undo {
+            background: #4a55f3;
+            margin-left: 0.3125rem;
+            padding: 0.3125rem 0.625rem;
+            color: #fff;
+            font-size: 1.125rem;
+          }
+          label {
+            background: #115811;
+            margin-left: 0.3125rem;
+          }
+          .crop {
+            background-color: #8e33b7;
+            margin-left: 0.3125rem;
+          }
+        }
+      }
+    }
+  }
+}
